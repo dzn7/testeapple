@@ -1,0 +1,39 @@
+{
+  "name": "apple-company-24hs",
+  "version": "1.0.0",
+  "description": "Site da Apple Company 24hs - Assistência e Acessórios para dispositivos Apple",
+  "main": "index.html",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build:dev": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "serve": "live-server --port=3000 --open=index.html",
+    "start": "npm run build && npm run serve",
+    "clean": "rimraf dist/output.css",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "apple",
+    "assistencia-tecnica",
+    "acessorios",
+    "iphone",
+    "ipad",
+    "macbook",
+    "apple-watch"
+  ],
+  "author": "Apple Company 24hs",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/applecompany24hs/site"
+  },
+  "bugs": {
+    "url": "https://github.com/applecompany24hs/site/issues"
+  },
+  "homepage": "https://applecompany24hs.com"
+}

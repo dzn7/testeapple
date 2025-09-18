@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados para Apple Company 24hs */
+@layer components {
+  .glass-morphism {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent;
+  }
+  
+  .service-card {
+    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 transition-all duration-300;
+  }
+  
+  .service-card:hover {
+    @apply -translate-y-2 scale-105 bg-gradient-to-br from-white/20 to-white/10 shadow-2xl;
+    box-shadow: 0 25px 50px rgba(30, 123, 184, 0.3);
+  }
+  
+  .floating-element {
+    @apply animate-float;
+  }
+  
+  .shimmer-effect {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer-effect::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer;
+  }
+  
+  .apple-logo {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+  }
+}
+
+@layer utilities {
+  .particle {
+    @apply absolute w-1 h-1 bg-white/60 rounded-full animate-particles;
+  }
+}
+
+/* Animações personalizadas */
+@keyframes particles {
+  0%, 100% { 
+    opacity: 0; 
+    transform: translateY(0) scale(0); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-100px) scale(1); 
+  }
+}
+
+.animate-particles {
+  animation: particles 4s infinite;
+}
